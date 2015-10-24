@@ -30,5 +30,5 @@ $db->setQuery($query);
 $articles = $db->loadObjectList(); 
 }
  
-$spotlightnews = modSpotlightNewHelper::getSpotlightNew($params);
+$spotlightnews = modSpotlightNewsHelper::getSpotlightNews($params);
 require JModuleHelper::getLayoutPath('mod_spotlight_news');
