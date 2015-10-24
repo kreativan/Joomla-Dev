@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Kreativan.Net Master Module</name>
+    <author>Ivan Milincic</author>
+    <creationDate>July 2015</creationDate>
+    <authorEmail>lokomotivan@gmail.com</authorEmail>
+    <authorUrl>www.kreativan.net</authorUrl>
+    <copyright>Copyright (C) Kreativan.Net</copyright>
+    <license>GNU General Public License v2 or later</license>
+    <version>1.0.0</version>
+    <description>Master Joomla Module. Developed by wwwk.reativan.net</description>
+    <files>
+        <filename>mod_master.xml</filename>
+        <filename module="mod_master">mod_master.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+    </files>
+    <config>
+	   <fields name="params">
+            <fieldset name="basic">
+                <field name="source" type="list" default="custom" label="Content Source">
+                    <option value="custom">Custom</option>
+                    <option value="joomla_articles">Joomla Articles</option>
+                </field>
+                <field name="slides" type="Repeatable" icon="list" description="" label="Repeatable">
+                    <fieldset hidden="true" name="slides_modal" repeat="true">
+                        <field name="image" label="Image" type="media" />
+                        <field name="title" label="Title" type="text" class="input-small" />
+                    </fieldset>
+                </field>
+                <field name="mycategory" type="category" extension="com_content" label="Joomla Category" description="" />
+                <field name="no_of_items" label="No of items to show" default="5" type="text" class="input-mini" />
+                <field name="sorting" type="list" default="created DESC" label="Sorting" >
+                    <option value="created DESC">Latest</option>
+                    <option value="created ASC">Oldest</option>
+                    <option value="modified DESC">Modified</option>
+                    <option value="publish_up DESC">Published</option>
+                    <option value="hits DESC">By Hits</option>
+                </field>
+                <field name="yes_no" type="radio" default="0" label="Yes NO" class="btn-group btn-group-yesno" >
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field type="spacer" name="myspacer" label="&lt;hr /&gt;&lt;h3&gt;&lt;strong&gt;Options&lt;/strong&gt;&lt;/h3&gt; &lt;em&gt;this is separator with title&lt;/em&gt;" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
