@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Page Heading</name>
+    <author>Ivan Milincic</author>
+    <creationDate>July 2015</creationDate>
+    <authorEmail>lokomotivan@gmail.com</authorEmail>
+    <authorUrl>www.kreativan.net</authorUrl>
+    <copyright>Copyright (C) Kreativan.Net</copyright>
+    <license>GNU General Public License v2 or later</license>
+    <version>1.0.0</version>
+    <description>Page heading module. Developed by kreativan.net</description>
+    <files>
+        <filename>mod_page_heading.xml</filename>
+        <filename module="mod_page_heading">mod_page_heading.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+    </files>
+    <config>
+	   <fields name="params">
+           
+            <fieldset name="basic">
+                <field name="background" type="media" directory="images" label ="Background" />
+                <field name="content" label ="Content" type="editor" width="300" filter="safehtml" />
+            </fieldset>
+           
+           <fieldset name="options">
+               <field name="height" type="text" label="Height" default="200" />
+               <field name="class" type="text" label="CSS Class" />
+               <field name="h_align" type="list" default="left" label="Content Align Horizontal">
+                   <option value="left">Left</option>
+                   <option value="right">Right</option>
+                   <option value="center">Center</option>
+               </field>
+               <field name="v_align" type="list" default="middle" label="Content Align Vertical">
+                   <option value="top">Top</option>
+                   <option value="bottom">Bottom</option>
+                   <option value="middle">Middle</option>
+               </field>
+           </fieldset>
+           
+        </fields>
+    </config>
+</extension>
