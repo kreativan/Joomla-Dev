@@ -46,6 +46,7 @@
            <fieldset name="options">
                <field type="spacer" name="go_spacer" label="&lt;h3&gt;&lt;strong&gt;General Options&lt;/strong&gt;&lt;/h3&gt; &lt;em&gt;&lt;/em&gt;" />
                <field name="time" type="text" default="3000" label="Time Between Slides" description="" size="10" />
+               <field name="title_limit" type="text" default="" label="Title Chars Limit" />
                 <!-- ANIMATIONS -->
            <fieldset name="options">
                <field type="spacer" name="animation_spacer" label="&lt;hr /&gt;&lt;h3&gt;&lt;strong&gt;Animations&lt;/strong&gt;&lt;/h3&gt; &lt;em&gt;&lt;/em&gt;" />

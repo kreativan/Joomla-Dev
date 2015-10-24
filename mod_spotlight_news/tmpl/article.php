@@ -65,7 +65,11 @@ defined('_JEXEC') or die;
     ?>
     
         
-    <div class="item"><h4><a href="<?php echo $url;?>"><?php echo $title;?></a></h4></div>
+    <div class="item">
+        <a href="<?php echo $url;?>">
+            <h3 class="ivm-spn-title"><?php echo $title;?></h3>
+        </a>
+    </div>
     
     
   <?php endif;?>    

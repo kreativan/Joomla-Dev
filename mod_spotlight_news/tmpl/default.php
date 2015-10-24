@@ -33,6 +33,14 @@ jQuery(function($) {
         items:1,
         mouseDrag: false
     })
+    
+    // limit number of chars for title
+    <?php if ($params->get('title_limit')) :?>
+        $(".ivm-spn-title").text(function(index, currentText) {
+            return currentText.substr(0, <?php echo $params->get('title_limit');?>);
+        });
+        $(".ivm-spn-title").append('...');
+    <?php endif;?>
 
 });
 </script>
