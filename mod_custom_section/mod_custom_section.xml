@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Custom Section</name>
+    <author>Ivan Milincic</author>
+    <creationDate>July 2015</creationDate>
+    <authorEmail>lokomotivan@gmail.com</authorEmail>
+    <authorUrl>www.kreativan.net</authorUrl>
+    <copyright>Copyright (C) Kreativan.Net</copyright>
+    <license>GNU General Public License v2 or later</license>
+    <version>1.0.0</version>
+    <description>Custom Section Module. Developed by www.kreativan.net</description>
+    <files>
+        <filename>mod_custom_section.xml</filename>
+        <filename module="mod_custom_section">mod_custom_section.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+    </files>
+    <config>
+	   <fields name="params">
+            
+           <fieldset name="basic">
+                <field name="background" type="media" directory="images" label ="Section Background" />
+                <field name="content" label ="Section Content" type="editor" width="300" filter="safehtml" />
+            </fieldset>
+           
+           <fieldset name="options">
+               <field name="height" type="text" label="Min Height" default="auto" />
+               <field name="class" type="text" label="CSS Class" />
+               <field name="css_id" type="text" label="CSS ID" />
+               <field name="h_align" type="list" default="left" label="Content Align Horizontal">
+                   <option value="left">Left</option>
+                   <option value="right">Right</option>
+                   <option value="center">Center</option>
+               </field>
+               <field name="v_align" type="list" default="middle" label="Content Align Vertical">
+                   <option value="top">Top</option>
+                   <option value="bottom">Bottom</option>
+                   <option value="middle">Middle</option>
+               </field>
+           </fieldset>
+           
+        </fields>
+    </config>
+</extension>
