@@ -1,16 +1,20 @@
 <?php
 /**
- * @package     Joomla.Module
+ * @package     Joomla.Site
  * @subpackage  mod_page_heading
- * @link        http://www.kreativan.net
- * @copyright   Ivan Milincic - www.kreativan.net. All rights reserved.
+ *
+ * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// No direct access
 defined('_JEXEC') or die;
-// Include the syndicate functions only once
-require_once dirname(__FILE__) . '/helper.php';
- 
-$pageheading = modPageHeadingHelper::getPageHeading($params);
-require JModuleHelper::getLayoutPath('mod_page_heading');
+
+if ($params->def('prepare_content', 1))
+{
+	JPluginHelper::importPlugin('content');
+	$module->content = JHtml::_('content.prepare', $module->content, '', 'mod_page_heading.content');
+}
+
+$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
+
+require JModuleHelper::getLayoutPath('mod_page_heading', $params->get('layout', 'default'));

@@ -1,33 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="3.1.0" client="site" method="upgrade">
-    <name>Page Heading</name>
-    <author>Ivan Milincic</author>
-    <creationDate>July 2015</creationDate>
-    <authorEmail>lokomotivan@gmail.com</authorEmail>
-    <authorUrl>www.kreativan.net</authorUrl>
-    <copyright>Copyright (C) Kreativan.Net</copyright>
-    <license>GNU General Public License v2 or later</license>
-    <version>1.0.0</version>
-    <description>Page heading module. Developed by kreativan.net</description>
-    <files>
-        <filename>mod_page_heading.xml</filename>
-        <filename module="mod_page_heading">mod_page_heading.php</filename>
-        <filename>index.html</filename>
-        <filename>helper.php</filename>
-        <folder>tmpl</folder>
-        <folder>assets</folder>
-    </files>
-    <config>
-	   <fields name="params">
-           
-            <fieldset name="basic">
-                <field name="background" type="media" directory="images" label ="Background" />
-                <field name="content" label ="Content" type="editor" width="300" filter="safehtml" />
-            </fieldset>
-           
-           <fieldset name="options">
-               <field name="height" type="text" label="Height" default="200" />
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>Page Heading</name>
+	<author>Ivan Milincic</author>
+	<creationDate>October 2015</creationDate>
+	<copyright>Copyright (C) 2005 - 2015 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>lokomotivan@gmail.com</authorEmail>
+	<authorUrl>www.kreativan.net</authorUrl>
+	<version>1.0.0</version>
+	<description>Page Heading Module. Developer by www.kreativan.net</description>
+
+	<customContent />
+
+	<files>
+		<filename module="mod_page_heading">mod_page_heading.php</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_CUSTOM_HTML" />
+	<config>
+		<fields name="params">
+            
+            <!-- default options -->
+			<fieldset name="options">
+				<field name="prepare_content" type="radio" class="btn-group btn-group-yesno" label="Prepare Content" default="0">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="background" type="media" label="Background" />
+			</fieldset>
+            
+            <!-- customs options -->
+            <fieldset name="options">
+               <field name="height" type="text" label="Min Height" default="auto" />
                <field name="class" type="text" label="CSS Class" />
+               <field name="css_id" type="text" label="CSS ID" />
                <field name="h_align" type="list" default="left" label="Content Align Horizontal">
                    <option value="left">Left</option>
                    <option value="right">Right</option>
@@ -39,7 +46,6 @@
                    <option value="middle">Middle</option>
                </field>
            </fieldset>
-           
-        </fields>
-    </config>
+		</fields>
+	</config>
 </extension>
