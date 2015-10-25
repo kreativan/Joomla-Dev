@@ -1,17 +1,20 @@
 <?php
 /**
- * @package     Joomla.Module
+ * @package     Joomla.Site
  * @subpackage  mod_custom_section
- * @link        http://www.kreativan.net
- * @copyright   Ivan Milincic - www.kreativan.net. All rights reserved.
+ *
+ * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// No direct access
 defined('_JEXEC') or die;
-// Include the syndicate functions only once
-require_once dirname(__FILE__) . '/helper.php';
 
- 
-$customsection = modCustomSectionHelper::getCustomSection($params);
-require JModuleHelper::getLayoutPath('mod_custom_section');
+if ($params->def('prepare_content', 1))
+{
+	JPluginHelper::importPlugin('content');
+	$module->content = JHtml::_('content.prepare', $module->content, '', 'mod_custom_section.content');
+}
+
+$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
+
+require JModuleHelper::getLayoutPath('mod_custom_section', $params->get('layout', 'default'));
