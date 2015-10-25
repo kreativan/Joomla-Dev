@@ -21,10 +21,11 @@ defined('_JEXEC') or die;
 
     $ivm_height = $params->get('height');
     $ivm_content_size   = $params->get('content_size');
+    $ivm_content_padding    = $params->get('content_padding');
 
 ?>
 
-<div <?php echo $ivm_css_id;?> class="ivm-page-heading<?php echo $ivm_class;?>" style="background:url(<?php echo $ivm_bg;?>);background-size:cover;background-repeat:no-repeat;background-position:center;">
+<div <?php echo $ivm_css_id;?> class="ivm-page-heading<?php echo $ivm_class;?>" style="background:url(<?php echo $ivm_bg;?>);background-size:cover;background-repeat:no-repeat;background-position:center;padding:<?php echo $ivm_content_padding;?> 0;">
     <div class="uk-container uk-container-center uk-flex uk-flex-<?php echo $ivm_h_align;?> uk-flex-<?php echo $ivm_v_align;?>" style="min-height:<?php echo $ivm_height;?>;">
         <div class="ivm-page-heading-content" style="max-width:<?php echo $ivm_content_size;?>">
             <?php echo $module->content;?>

@@ -34,6 +34,7 @@
             <fieldset name="options">
                <field name="height" type="text" label="Min Height" default="auto" />
                 <field name="content_size" type="text" label="Content Size" default="auto" />
+                <field name="content_padding" type="text" label="Content Padding" default="0px" />
                <field name="class" type="text" label="CSS Class" />
                <field name="css_id" type="text" label="CSS ID" />
                <field name="h_align" type="list" default="left" label="Content Align Horizontal">
