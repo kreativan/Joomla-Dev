@@ -19,18 +19,14 @@ defined('_JEXEC') or die;
     $ivm_h_align     = $params->get('h_align');
     $ivm_v_align     = $params->get('v_align');
 
-    if($params->get('height') !== 'auto') {
-        $ivm_height = $params->get('height') . 'px';
-    }
-    else {
-        $ivm_height = $params->get('height');
-    }
+    $ivm_height = $params->get('height');
+    $ivm_content_size   = $params->get('content_size');
 
 ?>
 
 <div <?php echo $ivm_css_id;?> class="ivm-page-heading<?php echo $ivm_class;?>" style="background:url(<?php echo $ivm_bg;?>);background-size:cover;background-repeat:no-repeat;background-position:center;">
     <div class="uk-container uk-container-center uk-flex uk-flex-<?php echo $ivm_h_align;?> uk-flex-<?php echo $ivm_v_align;?>" style="min-height:<?php echo $ivm_height;?>;">
-        <div class="ivm-page-heading-content">
+        <div class="ivm-page-heading-content" style="max-width:<?php echo $ivm_content_size;?>">
             <?php echo $module->content;?>
         </div>
     </div>
