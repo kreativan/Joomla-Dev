@@ -34,7 +34,7 @@ defined('_JEXEC') or die;
 
 <div <?php echo $ivm_css_id;?> class="ivm-page-heading<?php echo $ivm_class;?>" style="background:url(<?php echo $ivm_bg;?>);background-size:cover;background-repeat:no-repeat;background-position:center;padding:<?php echo $ivm_content_padding;?> 0;">
     <div class="uk-container uk-container-center <?php echo $ivm_full_screen;?> uk-flex uk-flex-<?php echo $ivm_h_align;?> uk-flex-<?php echo $ivm_v_align;?>" style="min-height:<?php echo $ivm_height;?>;">
-        <div class="ivm-page-heading-content" style="max-width:<?php echo $ivm_content_size;?>">
+        <div class="ivm-page-heading-content" style="width:<?php echo $ivm_content_size;?>">
             <?php echo $module->content;?>
         </div>
     </div>
