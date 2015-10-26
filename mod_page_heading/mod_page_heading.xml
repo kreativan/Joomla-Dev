@@ -27,11 +27,19 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
+                <field name="full_screen" type="radio" class="btn-group btn-group-yesno" label="Full Screen" default="0">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 				<field name="background" type="media" label="Background" />
 			</fieldset>
             
             <!-- customs options -->
             <fieldset name="options">
+                <field name="full_screen" type="radio" class="btn-group btn-group-yesno" label="Full Screen" default="0">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
                <field name="height" type="text" label="Min Height" default="auto" />
                 <field name="content_size" type="text" label="Content Size" default="auto" />
                 <field name="content_padding" type="text" label="Content Padding" default="0px" />
