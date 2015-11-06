@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="3.1" client="site" method="upgrade">
-	<name>Custom Section</name>
+	<name>Custom HTML Section</name>
 	<author>Ivan Milincic</author>
 	<creationDate>October 2015</creationDate>
 	<copyright>Copyright (C) 2005 - 2015 Open Source Matters. All rights reserved.</copyright>
@@ -32,6 +32,10 @@
 					<option value="0">JNO</option>
 				</field>
 				<field name="background" type="media" label="Background" />
+                <field name="overlay" type="radio" class="btn-group btn-group-yesno" label="Background Overlay" default="0">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 			</fieldset>
             
             <!-- customs options -->
