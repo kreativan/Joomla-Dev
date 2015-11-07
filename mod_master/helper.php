@@ -14,14 +14,6 @@ class ModMasterHelper {
    
     public static function getMaster($params) {
        
-       //only include if not already included  
-       $document = JFactory::getDocument();
-       
-       // add custom js
-       // $document->addCustomTag('<script src="modules/mod_master/assets/my_file.js" type="text/javascript"></script>');
-       
-       // add custom css
-       // JHtml::stylesheet('modules/mod_master/assets/my_file.css', true);
         
     }
 }
