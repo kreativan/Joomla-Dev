@@ -9,11 +9,15 @@
     <license>GNU General Public License v2 or later</license>
     <version>1.0.0</version>
     <description>Master Joomla Module. Developed by wwwk.reativan.net</description>
+    <languages>
+		<language tag="en-GB">language/en-GB.mod_master.ini</language>
+	</languages>
     <files>
         <filename>mod_master.xml</filename>
         <filename module="mod_master">mod_master.php</filename>
         <filename>index.html</filename>
         <filename>helper.php</filename>
+        <folder>language</folder>
         <folder>tmpl</folder>
         <folder>assets</folder>
     </files>
