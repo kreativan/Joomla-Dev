@@ -23,6 +23,7 @@
     </files>
     <config>
 	   <fields name="params">
+           
             <fieldset name="basic">
                 <field name="source" type="list" default="custom" label="Content Source">
                     <option value="custom">Custom</option>
@@ -47,8 +48,12 @@
                     <option value="1">Yes</option>
                     <option value="0">No</option>
                 </field>
-                <field type="spacer" name="myspacer" label="&lt;hr /&gt;&lt;h3&gt;&lt;strong&gt;Options&lt;/strong&gt;&lt;/h3&gt; &lt;em&gt;this is separator with title&lt;/em&gt;" />
             </fieldset>
+           
+           <fieldset name="advanced">
+				<field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" />
+			</fieldset>
+           
         </fields>
     </config>
 </extension>
