@@ -35,7 +35,9 @@
                         <field name="title" label="Title" type="text" class="input-small" />
                     </fieldset>
                 </field>
-                <field name="mycategory" type="category" extension="com_content" label="Joomla Category" description="" />
+                <field name="catid" type="category" extension="com_content" multiple="true" default="" size="10" label="Joomla Categories" description="">
+					<option value="all">All Categories</option>
+               </field>
                 <field name="no_of_items" label="No of items to show" default="5" type="text" class="input-mini" />
                 <field name="sorting" type="list" default="created DESC" label="Sorting" >
                     <option value="created DESC">Latest</option>
