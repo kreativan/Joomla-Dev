@@ -1,2 +1,2 @@
-#Joomla Extensions
-#www.kreativan.net
+#Joomla Development
+###www.kreativan.net
