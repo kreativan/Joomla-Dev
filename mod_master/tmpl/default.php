@@ -9,6 +9,8 @@
 
 // No direct access
 defined('_JEXEC') or die;
+
+include '_array.php';
   
   $module_id = $module->id;
   
