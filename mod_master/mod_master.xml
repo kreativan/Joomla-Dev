@@ -36,8 +36,8 @@
                     <option value="custom">Custom</option>
                     <option value="joomla_articles">Joomla Articles</option>
                 </field>
-                <field name="slides" type="Repeatable" icon="list" description="" label="Repeatable">
-                    <fieldset hidden="true" name="slides_modal" repeat="true">
+                <field name="items" type="Repeatable" icon="list" description="" label="Repeatable Items">
+                    <fieldset hidden="true" name="items_modal" repeat="true">
                         <field name="image" label="Image" type="media" />
                         <field name="title" label="Title" type="text" class="input-small" />
                     </fieldset>

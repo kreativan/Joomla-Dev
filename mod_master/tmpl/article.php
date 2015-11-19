@@ -62,8 +62,8 @@ defined('_JEXEC') or die;
         // FINAL ARTICLE VARIABLES
         // Text
         $title = $article->title;
-        $intro_text = $article->introtext;
-        $full_text  = $article->fulltext; 
+        $intro_text = strip_tags($article->introtext);
+        $full_text  = strip_tags($article->fulltext); 
     
         // images
         $intro_image = $image->{'image_intro'};
