@@ -2,7 +2,7 @@
 
     // Get Articles from db
     $sort = $params->get('sorting');
-    $no_of_articles = $params->get('no_of_items');
+    $no_of_db_items = $params->get('no_of_items');
     
     //$catId = $params->get('catid');                           // <-- single category
     $catId = join(',', $params->get('catid'));                  //<-- join multiple categories
