@@ -32,6 +32,7 @@ if (is_array($json)) {
     }
     $ivm_array = items($json); // <--change
     $items     = $ivm_array; // this is default items array
+    $items = array_reverse($items); // reverse sorting
 }
 
 if (!function_exists('sorting')) {

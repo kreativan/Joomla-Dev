@@ -26,8 +26,8 @@
            
            <!-- JOOMLA CATEGORIES MULTIPLE -->
            <fieldset name="basic">
-               <field showon="source:joomla" name="catid" type="category" extension="com_content" multiple="true" default="" size="10" label="Joomla Categories" >
-					<option value="">All Categories</option>
+               <field showon="source:joomla" name="catid" type="category" extension="com_content" multiple="true" default="all" size="10" label="Joomla Categories" >
+					<option value="all">All Categories</option>
                </field>
            </fieldset>
            
@@ -57,6 +57,16 @@
             </fieldset>
            
            <fieldset name="advanced">
+                <field
+					name="prepare_content"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					label="Prepare Content"
+					description="MOD_CUSTOM_FIELD_PREPARE_CONTENT_DESC"
+					default="0">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 				<field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" />
 			</fieldset>
            
