@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.7//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.7/template-install.dtd">
 <extension version="2.5" type="template" client="site" method="upgrade">
-	<name>csi</name>
+	<name>kreativan.net</name>
 	<version>1.0.0</version>
 	<creationDate>March 2014</creationDate>
 	<author>Ivan Milincic</author>
@@ -9,7 +9,7 @@
 	<authorUrl>http://www.kreativan.com</authorUrl>
     <copyright>Copyright (C) Funwebsign</copyright>
     <license>http://www.gnu.org/licenses/gpl.html GNU/GPL</license>
-	<description>CSI Warp 7 Theme.</description>
+	<description>Warp 7 Master Theme Kreativan.Net.</description>
 	<files>
 		<filename>checksums</filename>
 		<filename>apple_touch_icon.png</filename>
@@ -44,9 +44,8 @@
         <position settings="">toolbar-r</position>
         <position settings="">breadcrumbs</position>
         <position settings="">hero</position>
-        <position settings="">spotlight</position>
-        <position settings="">top</position>
-        <position settings="">bottom</position>
+        <position settings="">section-top</position>
+        <position settings="">section-bottom</position>
         <position>top-a</position>
         <position>top-b</position>
         <position>bottom-a</position>
@@ -59,9 +58,10 @@
         <position settings="">footer</position>
         <position settings="">offcanvas</position>
         <position settings="">debug</position>
+		<position settings="">system</position>
     </positions>
 	<config>
-		<fields name="params" addfieldpath="/templates/csi/warp/systems/joomla/config/elements">
+		<fields name="params" addfieldpath="/templates/kreativan.net/warp/systems/joomla/config/elements">
 			<fieldset name="options">
 		    	<field name="config" type="config" label="Config" description="" default="" />
 			</fieldset>

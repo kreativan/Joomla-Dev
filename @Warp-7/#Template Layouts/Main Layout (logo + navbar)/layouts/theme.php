@@ -18,11 +18,11 @@ include($this['path']->path('layouts:theme.config.php'));
 </head>
 
 <body class="<?php echo $this['config']->get('body_classes'); ?>">
-    
+
     <?php if ($this['widgets']->count('offcanvas')) : ?>
     <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
     <?php endif; ?>
-    
+
     <?php if ($this['widgets']->count('toolbar-l + toolbar-r')) : ?>
     <section class="tm-toolbar uk-clearfix uk-hidden-small">
         <div class="uk-container uk-container-center">
@@ -36,11 +36,11 @@ include($this['path']->path('layouts:theme.config.php'));
         </div>
     </section>
     <?php endif; ?>
-    
+
     <?php if ($this['widgets']->count('logo + menu')) : ?>
     <section class="tm-header uk-clearfix">
         <div class="uk-container uk-container-center">
-            
+
             <?php if ($this['widgets']->count('logo')) : ?>
             <div class="tm-logo uk-float-left">
                 <a href="<?php echo $this['config']->get('site_url'); ?>">
@@ -56,17 +56,17 @@ include($this['path']->path('layouts:theme.config.php'));
                 <?php endif; ?>
             </nav>
             <?php endif; ?>
-            
-        </div>    
+
+        </div>
     </section>
     <?php endif; ?>
-    
+
     <section class="tm-hero">
         <?php if ($this['widgets']->count('hero')) : ?>
         <?php echo $this['widgets']->render('hero'); ?>
         <?php endif; ?>
     </section>
-    
+
     <?php if ($this['widgets']->count('top-a')) : ?>
     <section id="tm-top-a" class="tm-section">
         <div class="uk-container uk-container-center">
@@ -74,10 +74,10 @@ include($this['path']->path('layouts:theme.config.php'));
         </div>
     </section>
     <?php endif; ?>
-        
-    <section id="tm-top">
-        <?php if ($this['widgets']->count('top')) : ?>
-        <?php echo $this['widgets']->render('top'); ?>
+
+    <section id="tm-section-top" class="tm-section">
+        <?php if ($this['widgets']->count('section-top')) : ?>
+        <?php echo $this['widgets']->render('section-top'); ?>
         <?php endif; ?>
     </section>
 
@@ -88,8 +88,8 @@ include($this['path']->path('layouts:theme.config.php'));
             </div>
         </section>
 		<?php endif; ?>
-    
-<div class="uk-container uk-container-center"><!-- main content start --> 
+
+<div class="uk-container uk-container-center"><!-- main content start -->
 
 		<?php if ($this['widgets']->count('main-top + main-bottom + sidebar-a + sidebar-b') || $this['config']->get('system_output', true)) : ?>
 		<div id="tm-middle" class="tm-middle uk-grid" data-uk-grid-match data-uk-grid-margin>
@@ -128,8 +128,8 @@ include($this['path']->path('layouts:theme.config.php'));
 
 		</div>
 		<?php endif; ?>
-    
-</div><!-- main content end -->    
+
+</div><!-- main content end -->
 
 		<?php if ($this['widgets']->count('bottom-a')) : ?>
         <section id="tm-bottom-a" class="tm-section">
@@ -138,10 +138,10 @@ include($this['path']->path('layouts:theme.config.php'));
             </div>
         </section>
 		<?php endif; ?>
-    
-    <section id="tm-bottom">
-        <?php if ($this['widgets']->count('bottom')) : ?>
-        <?php echo $this['widgets']->render('bottom'); ?>
+
+    <section id="tm-section-bottom" class="tm-section">
+        <?php if ($this['widgets']->count('section-bottom')) : ?>
+        <?php echo $this['widgets']->render('section-bottom'); ?>
         <?php endif; ?>
     </section>
 
@@ -152,7 +152,7 @@ include($this['path']->path('layouts:theme.config.php'));
             </div>
         </section>
 		<?php endif; ?>
-    
+
         <?php if ($this['widgets']->count('bottom-c')) : ?>
         <section id="tm-bottom-c" class="tm-section">
             <div class="uk-container uk-container-center">
@@ -164,7 +164,7 @@ include($this['path']->path('layouts:theme.config.php'));
 		<?php if ($this['widgets']->count('footer + debug') || $this['config']->get('warp_branding', true) || $this['config']->get('totop_scroller', true)) : ?>
 		<footer id="tm-footer">
             <div class="uk-container uk-container-center">
-            
+
                 <?php if ($this['config']->get('totop_scroller', true)) : ?>
                 <a class="tm-totop-scroller" data-uk-smooth-scroll href="#"></a>
                 <?php endif; ?>
@@ -174,7 +174,7 @@ include($this['path']->path('layouts:theme.config.php'));
                     $this->output('warp_branding');
                     echo $this['widgets']->render('debug');
                 ?>
-                
+
             </div>
 		</footer>
 		<?php endif; ?>
@@ -186,6 +186,11 @@ include($this['path']->path('layouts:theme.config.php'));
 		<div class="uk-offcanvas-bar"><?php echo $this['widgets']->render('offcanvas'); ?></div>
 	</div>
 	<?php endif; ?>
+
+    <!-- system modules -->
+    <?php if ($this['widgets']->count('system')) : ?>
+        <?php echo $this['widgets']->render('system'); ?>
+    <?php endif; ?>
 
 </body>
 </html>

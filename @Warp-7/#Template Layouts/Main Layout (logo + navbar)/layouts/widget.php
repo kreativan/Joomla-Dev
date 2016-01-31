@@ -23,6 +23,15 @@ else if (in_array($widget->position, array('top','bottom', 'hero', 'toolbar-r' ,
 	$panel = 'uk-panel';
 }
 
+// section panel
+if (in_array($widget->position, array('section-top', 'section-bottom'))) {
+	$panel = 'tm-section-panel';
+}
+// system panel
+if ($widget->position == 'system') {
+    $panel = 'tm-system-panel';
+}
+
 // Set badge
 $badge = ($badge && $badge['text']) ? '<div class="'.$badge['type'].'">'.$badge['text'].'</div>': '';
 
@@ -37,7 +46,7 @@ $content = $widget->content;
 $title   = ($widget->showtitle) ? $widget->title : '';
 
 // Set title
-if (in_array($widget->position, array('top','bottom', 'hero', 'toolbar-r' ,'toolbar-l', 'footer'))) {
+if (in_array($widget->position, array('section-top','section-bottom', 'hero', 'toolbar-r' ,'toolbar-l', 'footer'))) {
 	$title = '';
 } elseif ($title && !($widget->position == 'menu')) {
 	$title = '<h3 class="'.($title_size ? $title_size : 'uk-panel-title').'">'.$icon.$title.'</h3>';
