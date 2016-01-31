@@ -23,6 +23,10 @@ else if (in_array($widget->position, array('top','bottom', 'hero', 'toolbar-r' ,
 	$panel = 'uk-panel';
 }
 
+// hero panel
+if ($widget->position == 'hero') {
+    $panel = 'tm-hero-panel';
+}
 // section panel
 if (in_array($widget->position, array('section-top', 'section-bottom'))) {
 	$panel = 'tm-section-panel';
