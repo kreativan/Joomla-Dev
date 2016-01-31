@@ -38,7 +38,7 @@ include($this['path']->path('layouts:theme.config.php'));
     <?php endif; ?>
 
     <?php if ($this['widgets']->count('logo + menu')) : ?>
-    <section class="tm-header uk-clearfix">
+    <section id="tm-header" class="uk-clearfix">
         <div class="uk-container uk-container-center">
 
             <?php if ($this['widgets']->count('logo')) : ?>
@@ -61,7 +61,7 @@ include($this['path']->path('layouts:theme.config.php'));
     </section>
     <?php endif; ?>
 
-    <section class="tm-hero">
+    <section id="tm-hero">
         <?php if ($this['widgets']->count('hero')) : ?>
         <?php echo $this['widgets']->render('hero'); ?>
         <?php endif; ?>
