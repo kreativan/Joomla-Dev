@@ -89,9 +89,10 @@ include($this['path']->path('layouts:theme.config.php'));
         </section>
 		<?php endif; ?>
 
-<div class="uk-container uk-container-center"><!-- main content start -->
+<?php if ($this['widgets']->count('main-top + main-bottom + sidebar-a + sidebar-b') || $this['config']->get('system_output', true)) : ?>
+<div class="uk-container uk-container-center">
+<!-- main content start -->
 
-		<?php if ($this['widgets']->count('main-top + main-bottom + sidebar-a + sidebar-b') || $this['config']->get('system_output', true)) : ?>
 		<div id="tm-middle" class="tm-middle uk-grid" data-uk-grid-match data-uk-grid-margin>
 
 			<?php if ($this['widgets']->count('main-top + main-bottom') || $this['config']->get('system_output', true)) : ?>
@@ -127,9 +128,9 @@ include($this['path']->path('layouts:theme.config.php'));
             <?php endforeach ?>
 
 		</div>
-		<?php endif; ?>
 
 </div><!-- main content end -->
+<?php endif; ?>
 
 		<?php if ($this['widgets']->count('bottom-a')) : ?>
         <section id="tm-bottom-a" class="tm-section">
