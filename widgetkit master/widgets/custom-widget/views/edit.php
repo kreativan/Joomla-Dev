@@ -26,6 +26,14 @@
                     </div>
                 </div>
 
+                <!-- media -->
+                <div class="uk-form-row">
+                    <label class="uk-form-label">{{'Image' | trans}}</label>
+                    <div class="uk-form-controls">
+                        <field-media title="item.title" media="widget.data.image"></field-media>
+                    </div>
+                </div>
+
                 <!-- select (replace "ivm_select" with your name/value) -->
                 <div class="uk-form-row">
                     <label class="uk-form-label" for="wk-nav">{{'ivm_select' | trans}}</label>
