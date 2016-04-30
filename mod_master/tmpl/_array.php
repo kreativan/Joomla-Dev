@@ -36,12 +36,15 @@ if (is_array($json)) {
 }
 
 if (!function_exists('sorting')) {
-        
+
         function sorting($a, $b) {
             return $a[0] - $b[0];
         }
     }
-usort($items, 'sorting');
 
-                     
+if($params->get('items')) {
+    usort($items, 'sorting');
+}
+
+
 ?>

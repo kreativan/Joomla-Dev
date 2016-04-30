@@ -11,25 +11,25 @@
 defined('_JEXEC') or die;
 
 include '_array.php';
-  
+
   $module_id = $module->id;
-  
+
 ?>
 
 <!-- Loop true repeatable element -->
-<?php if (is_array($items)) : ?> <!-- if array exists -->
+<?php if ($params->get('items') && is_array($items)) : ?>
 
   <?php foreach($items as $item) : ?>
     <?php
         /* array
           $item[0]
-          $item[1] 
+          $item[1]
           $item[2]
           $item[4]
         */
         print_r($item);
     ?>
-    
+
   <?php endforeach;?>
 
 <?php endif;?>
