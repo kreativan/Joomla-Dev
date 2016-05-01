@@ -23,39 +23,53 @@
     </files>
     <config>
 	   <fields name="params">
-           
-           <!-- JOOMLA CATEGORIES MULTIPLE -->
+
            <fieldset name="basic">
-               <field showon="source:joomla" name="catid" type="category" extension="com_content" multiple="true" default="all" size="10" label="Joomla Categories" >
-					<option value="all">All Categories</option>
+              <field name="source" type="list" default="custom" label="Content Source">
+                  <option value="custom">Custom</option>
+                  <option value="joomla">Joomla Articles</option>
+              </field>
+           </fieldset>
+
+          <!-- CUSTOM -->
+           <fieldset name="basic">
+               <field name="items" type="Repeatable" icon="list" description="" label="Repeatable Items" showon="source:custom">
+                   <fieldset hidden="true" name="items_modal" repeat="true">
+                       <field name="sort" label="Ordering" type="text" class="input-mini" default="1" />
+                       <field name="image" label="Image" type="media" />
+                       <field name="title" label="Title" type="text" />
+                       <field name="text" type="textarea" label="Content" class="span4" rows="7" />
+                       <field name="link" label="Link" type="text" class="input-medium" />
+                       <field name="blank" type="checkbox" label="New Tab" value="1" />
+                   </fieldset>
                </field>
            </fieldset>
-           
-            <fieldset name="basic">
-                <field name="source" type="list" default="custom" label="Content Source">
-                    <option value="custom">Custom</option>
-                    <option value="joomla_articles">Joomla Articles</option>
-                </field>
-                <field name="items" type="Repeatable" icon="list" description="" label="Repeatable Items">
-                    <fieldset hidden="true" name="items_modal" repeat="true">
-                        <field name="image" label="Image" type="media" />
-                        <field name="title" label="Title" type="text" class="input-small" />
-                    </fieldset>
-                </field>
-                <field name="no_of_items" label="No of items to show" default="5" type="text" class="input-mini" />
-                <field name="sorting" type="list" default="created DESC" label="Sorting" >
-                    <option value="created DESC">Latest</option>
-                    <option value="created ASC">Oldest</option>
-                    <option value="modified DESC">Modified</option>
-                    <option value="publish_up DESC">Published</option>
-                    <option value="hits DESC">By Hits</option>
-                </field>
-                <field name="yes_no" type="radio" default="0" label="Yes NO" class="btn-group btn-group-yesno" >
-                    <option value="1">Yes</option>
-                    <option value="0">No</option>
-                </field>
-            </fieldset>
-           
+
+           <!-- JOOMLA CATEGORIES MULTIPLE -->
+           <fieldset name="basic">
+               <field name="catid" type="category" extension="com_content" multiple="true" default="all" size="10" label="Joomla Categories" showon="source:joomla">
+                  <option value="all">All Categories</option>
+               </field>
+           </fieldset>
+
+           <fieldset name="basic">
+               <field name="no_of_items" label="No of items to show" default="5" type="text" class="input-mini" showon="source:joomla" />
+               <field name="sorting" type="list" default="created DESC" label="Sorting" showon="source:joomla" >
+                   <option value="created DESC">Latest</option>
+                   <option value="created ASC">Oldest</option>
+                   <option value="modified DESC">Modified</option>
+                   <option value="publish_up DESC">Published</option>
+                   <option value="hits DESC">By Hits</option>
+               </field>
+           </fieldset>
+
+           <fieldset name="options">
+               <field name="yes_no" type="radio" default="0" label="Yes NO" class="btn-group btn-group-yesno" >
+                   <option value="1">Yes</option>
+                   <option value="0">No</option>
+               </field>
+           </fieldset>
+
            <fieldset name="advanced">
                 <field
 					name="prepare_content"
@@ -69,7 +83,7 @@
 				</field>
 				<field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" />
 			</fieldset>
-           
+
         </fields>
     </config>
 </extension>
