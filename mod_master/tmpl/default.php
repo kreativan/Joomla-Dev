@@ -21,11 +21,18 @@ include '_array.php';
 
   <?php foreach($items as $item) : ?>
     <?php
-        /* array
-          $item[0]
-          $item[1]
-          $item[2]
-          $item[4]
+        /*
+            $img        = $item[1];
+            $title      = $item[2];
+            $text       = $item[3];
+            $url       = $item[4];
+            $_blank     = $item[5];
+
+            if($_blank == 1) {
+                $_blank = 'target="_blank"';
+            }else {
+                $_blank = '';
+            }
         */
         print_r($item);
     ?>
