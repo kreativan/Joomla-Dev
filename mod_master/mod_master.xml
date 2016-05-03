@@ -38,7 +38,7 @@
                        <field name="sort" label="Ordering" type="text" class="input-mini" default="1" />
                        <field name="image" label="Image" type="media" />
                        <field name="title" label="Title" type="text" />
-                       <field name="text" type="textarea" label="Content" class="span4" rows="7" />
+                       <field name="text" type="textarea" label="Content" class="span4" rows="10" />
                        <field name="link" label="Link" type="text" class="input-medium" />
                        <field name="blank" type="checkbox" label="New Tab" value="1" />
                    </fieldset>
@@ -53,7 +53,7 @@
            </fieldset>
 
            <fieldset name="basic">
-               <field name="no_of_items" label="No of items to show" default="5" type="text" class="input-mini" showon="source:joomla" />
+               <field name="no_of_j_items" label="No of items to show" default="5" type="text" class="input-mini" showon="source:joomla" />
                <field name="sorting" type="list" default="created DESC" label="Sorting" showon="source:joomla" >
                    <option value="created DESC">Latest</option>
                    <option value="created ASC">Oldest</option>
