@@ -1,2 +1,3 @@
-#Joomla Development
-###www.kreativan.net
+##Joomla Development
+###
+Some custom modules and other useful joomla stuff. 
